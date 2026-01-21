@@ -48,5 +48,76 @@ def cuadrado_cubo():
     print("Cuadrado:", n ** 2)
     print("Cubo:", n ** 3)
 
+def promedio_numeros():
+    suma = 0
+    contador = 0
+    while True:
+        num = float(input("Ingrese un número (-1 para terminar): "))
+        if num == -1:
+            break
+        suma += num
+        contador += 1
+
+    if contador > 0:
+        print("El promedio es:", suma / contador)
+    else:
+        print("No se ingresaron números")
+
+
+def max_min():
+    n = int(input("¿Cuántos números desea ingresar?: "))
+    numeros = []
+
+    for i in range(n):
+        num = int(input(f"Ingrese el número {i+1}: "))
+        numeros.append(num)
+
+    print("Número máximo:", max(numeros))
+    print("Número mínimo:", min(numeros))
+    print("Total de números ingresados:", len(numeros))
+
+
+def menu():
+    while True:
+        print("\n--- MENÚ DE OPCIONES ---")
+        print("1. Suma de n números")
+        print("2. Producto de n números")
+        print("3. División entre 2 números")
+        print("4. Factorial de un número")
+        print("5. Tabla de multiplicar")
+        print("6. Cuadrado y cubo de un número")
+        print("7. Promedio de números")
+        print("8. Máximo y mínimo")
+        print("9. Salir")
+
+        opcion = input("Seleccione una opción: ")
+
+        if opcion == "1":
+            suma_numeros()
+        elif opcion == "2":
+            producto_numeros()
+        elif opcion == "3":
+            division_dos_numeros()
+        elif opcion == "4":
+            factorial()
+        elif opcion == "5":
+            tablas_multiplicar()
+        elif opcion == "6":
+            cuadrado_cubo()
+        elif opcion == "7":
+            promedio_numeros()
+        elif opcion == "8":
+            max_min()
+        elif opcion == "9":
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción no válida")
+
+
+menu()
+
+
+
 
 
